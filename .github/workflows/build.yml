@@ -24,6 +24,12 @@ jobs:
         uses: android-actions/setup-android@v3
       - name: Unzip Project
         run: unzip MFD-v2-Android.zip
+      - name: Fix Model Name
+        run: |
+          sed -i 's|gemini-1.5-flash:generateContent|gemini-2.0-flash:generateContent|g' \
+            MFD2/app/src/main/java/com/mfd/assistant/GeminiClient.java
+          sed -i 's|gemini-1.5-flash:generateContent|gemini-2.0-flash:generateContent|g' \
+            MFD2/app/src/main/java/com/mfd/assistant/SetupActivity.java
       - name: Create local.properties
         run: echo "sdk.dir=$ANDROID_SDK_ROOT" > MFD2/local.properties
       - name: Build Debug APK
@@ -31,5 +37,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: MFD-v2-debug
+          name: MFD-v2-fixed
           path: MFD2/app/build/outputs/apk/debug/app-debug.apk
