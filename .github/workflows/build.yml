@@ -20,8 +20,23 @@ jobs:
         run: |
           ZIP=$(find . -name "*.zip" | head -1)
           unzip "$ZIP" -d extracted
-          INNER=$(find extracted -name "gradlew" | head -1 | xargs dirname)
+          INNER=$(find extracted -name "build.gradle" | head -1 | xargs dirname)
           cp -r "$INNER"/. .
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Download Gradle Wrapper
+        run: |
+          mkdir -p gradle/wrapper
+          curl -L "https://services.gradle.org/distributions/gradle-8.4-bin.zip" -o gradle-dist.zip
+          wget -q "https://raw.githubusercontent.com/gradle/gradle/v8.4.0/gradle/wrapper/gradle-wrapper.jar" \
+            -O gradle/wrapper/gradle-wrapper.jar || \
+          curl -L "https://github.com/gradle/gradle/raw/v8.4.0/gradle/wrapper/gradle-wrapper.jar" \
+            -o gradle/wrapper/gradle-wrapper.jar
+
+      - name: Grant execute permission
+        run: chmod +x gradlew
 
       - name: Cache Gradle
         uses: actions/cache@v4
@@ -30,9 +45,6 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
-
-      - name: Grant execute permission
-        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
