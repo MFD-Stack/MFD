@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.cxx/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keystore (sign yourself!)
+*.jks
+*.keystore
+
+# APK output (built via CI)
+*.apk
+*.aab

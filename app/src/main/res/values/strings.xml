@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MFD</string>
+    <string name="developer_name">Mehmet Fatih DURSUN</string>
+    <string name="app_version">v4.0</string>
+    <string name="settings_title">Ayarlar — MFD</string>
+    <string name="setup_title">MFD Kurulum</string>
+    <string name="about_text">MFD — Multi-Function Device\nGeliştirici: Mehmet Fatih DURSUN\nSürüm 4.0</string>
+</resources>

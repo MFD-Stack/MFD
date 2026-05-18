@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AYARLAR"
+            android:textColor="@color/teal_primary" android:textSize="24sp"
+            android:textStyle="bold" android:letterSpacing="0.3"
+            android:layout_marginTop="16dp" android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Hesap / API -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="API ve Kimlik" android:textColor="@color/teal_text"
+            android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <EditText android:id="@+id/etKey"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Gemini API anahtarı (AIza...)" android:textColor="@color/teal_text"
+            android:textColorHint="@color/teal_mid"
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="textVisiblePassword"
+            android:autofillHints="off"
+            android:layout_marginBottom="8dp"
+            tools:ignore="LabelFor"/>
+
+        <Button android:id="@+id/btnTest"
+            android:layout_width="match_parent" android:layout_height="42dp"
+            android:text="API'yi test et" android:textColor="@color/teal_primary"
+            android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="12dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Model" android:textColor="@color/teal_mid"
+            android:textSize="11sp" android:layout_marginBottom="4dp"
+            tools:ignore="HardcodedText" />
+        <Spinner android:id="@+id/spModel"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText android:id="@+id/etLoc"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Şehir (hava durumu)"
+            android:textColor="@color/teal_text" android:textColorHint="@color/teal_mid"
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="text" android:autofillHints="postalAddress"
+            android:layout_marginBottom="8dp"
+            tools:ignore="LabelFor" />
+
+        <EditText android:id="@+id/etName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Adınız"
+            android:textColor="@color/teal_text" android:textColorHint="@color/teal_mid"
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="textPersonName" android:autofillHints="name"
+            android:layout_marginBottom="20dp"
+            tools:ignore="LabelFor" />
+
+        <!-- Wake-word -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Wake-word ve Otomatik Başlatma"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox android:id="@+id/cbWake"
+            android:text='"Hey MFD" ile sürekli dinleme (foreground servis)'
+            android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <EditText android:id="@+id/etWake"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Wake-word ifade (örn: hey mfd)"
+            android:textColor="@color/teal_text" android:textColorHint="@color/teal_mid"
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="10dp"
+            android:inputType="text" android:autofillHints="off"
+            android:layout_marginBottom="8dp"
+            tools:ignore="LabelFor" />
+
+        <CheckBox android:id="@+id/cbBoot"
+            android:text="Cihaz açılınca otomatik başlat"
+            android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox android:id="@+id/cbBubble"
+            android:text="Ekran üzeri balon (her yerden erişim)"
+            android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Otomatik cevap -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Otomatik Cevap"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Mod (off=kapalı, ask=sor, auto=otomatik)"
+            android:textColor="@color/teal_mid" android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+        <Spinner android:id="@+id/spAutoMode"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Hangi uygulamaları dinle?"
+            android:textColor="@color/teal_mid" android:textSize="11sp"
+            android:layout_marginBottom="4dp"
+            tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbReplyWa" android:text="WhatsApp" android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbReplyTg" android:text="Telegram" android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbReplySms" android:text="SMS / Mesajlar" android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Onay isteyecek aksiyonlar -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Şu işlemler için her zaman onay sor:"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbApproveWa"  android:text="WhatsApp mesajı gönderirken"   android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content" tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbApproveSms" android:text="SMS gönderirken"               android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content" tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbApproveCall" android:text="Telefonla ararken"            android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content" tools:ignore="HardcodedText" />
+        <CheckBox android:id="@+id/cbApproveCal" android:text="Takvime ekleme/silme"          android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Ses ve dil -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Ses ve Dil"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dinleme dili" android:textColor="@color/teal_mid" android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+        <Spinner android:id="@+id/spListenLang"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Konuşma (TTS) dili" android:textColor="@color/teal_mid" android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+        <Spinner android:id="@+id/spTtsLang"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:background="@drawable/input_bg"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/tvRate" android:text="Hız: 1.00x"
+            android:textColor="@color/teal_text"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <SeekBar android:id="@+id/sbRate" android:max="100"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView android:id="@+id/tvPitch" android:text="Ton: 1.00"
+            android:textColor="@color/teal_text"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <SeekBar android:id="@+id/sbPitch" android:max="100"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Model davranışı -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Model Davranışı"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView android:id="@+id/tvTemp" android:text="Yaratıcılık: 0.70"
+            android:textColor="@color/teal_text"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <SeekBar android:id="@+id/sbTemp" android:max="100"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"/>
+
+        <CheckBox android:id="@+id/cbThink"
+            android:text="Düşünme modu (Gemini 2.5 — yavaş ama daha akıllı)"
+            android:textColor="@color/teal_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- İzinler -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="İzinler ve Erişim"
+            android:textColor="@color/teal_text" android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <Button android:id="@+id/btnPermAll"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Çalışma zamanı izinlerini ver"
+            android:textColor="@color/teal_primary" android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="6dp"
+            tools:ignore="HardcodedText" />
+        <Button android:id="@+id/btnPermNotif"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Bildirim erişimi (WhatsApp/Telegram)"
+            android:textColor="@color/teal_primary" android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="6dp"
+            tools:ignore="HardcodedText" />
+        <Button android:id="@+id/btnPermOverlay"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Diğer uygulamaların üzerinde göster (balon)"
+            android:textColor="@color/teal_primary" android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="6dp"
+            tools:ignore="HardcodedText" />
+        <Button android:id="@+id/btnPermBattery"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Pil optimizasyonundan muaf tut"
+            android:textColor="@color/teal_primary" android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="6dp"
+            tools:ignore="HardcodedText" />
+        <Button android:id="@+id/btnPermDnd"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Rahatsız etme erişimi (ses kontrolü)"
+            android:textColor="@color/teal_primary" android:backgroundTint="@color/teal_dim"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <Button android:id="@+id/btnSave"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="KAYDET" android:textColor="@color/bg_dark"
+            android:backgroundTint="@color/teal_primary"
+            android:textStyle="bold" android:letterSpacing="0.2"
+            android:layout_marginBottom="40dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</ScrollView>

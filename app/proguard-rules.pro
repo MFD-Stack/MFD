@@ -1,0 +1,2 @@
+-keep class com.mfd.assistant.** { *; }
+-keepattributes *Annotation*

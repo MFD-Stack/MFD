@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme primary colors -->
+    <color name="bg_dark">#0D0D0F</color>
+    <color name="bg_card">#1A1A1F</color>
+    <color name="bg_input">#252530</color>
+    <color name="accent_teal">#00C8A0</color>
+    <color name="accent_blue">#4488FF</color>
+    <color name="accent_purple">#9B59B6</color>
+    <color name="text_primary">#F0F0F5</color>
+    <color name="text_secondary">#88889A</color>
+    <color name="text_hint">#555566</color>
+    <color name="status_green">#00C86A</color>
+    <color name="status_yellow">#FFCC00</color>
+    <color name="status_red">#FF3344</color>
+    <color name="divider">#2A2A35</color>
+
+    <!-- Light theme -->
+    <color name="bg_light">#F5F5FA</color>
+    <color name="bg_card_light">#FFFFFF</color>
+    <color name="text_primary_light">#0D0D1A</color>
+    <color name="text_secondary_light">#555570</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">#00C8A0</color>
+    <color name="colorPrimaryDark">#009975</color>
+    <color name="colorAccent">#4488FF</color>
+
+    <!-- Teal palette (used by setup/settings layouts) -->
+    <color name="teal_primary">#00C8A0</color>
+    <color name="teal_text">#E6FFF8</color>
+    <color name="teal_mid">#5FB39A</color>
+    <color name="teal_dim">#13241F</color>
+    <color name="color_gold">#FFCC00</color>
+</resources>

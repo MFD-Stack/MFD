@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="32dp" android:gravity="center_horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="M.F.D" android:textColor="@color/teal_primary"
+            android:textSize="40sp" android:textStyle="bold" android:letterSpacing="0.3"
+            android:layout_gravity="center" android:layout_marginTop="40dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Mehmet Fatih DURSUN" android:textColor="@color/teal_mid"
+            android:textSize="11sp" android:layout_gravity="center" android:layout_marginBottom="4dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="MULTI-FUNCTION DEVICE" android:textColor="@color/teal_dim"
+            android:textSize="10sp" android:layout_gravity="center" android:layout_marginBottom="40dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Gemini API Anahtarı" android:textColor="@color/teal_text"
+            android:textSize="13sp" android:layout_marginBottom="6dp"/>
+
+        <EditText android:id="@+id/etGeminiKey"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="AIza..." android:textColor="@color/teal_text"
+            android:textColorHint="@color/teal_mid" android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="textVisiblePassword" android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/btnTest"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="API'yi Test Et" android:textColor="@color/teal_primary"
+            android:backgroundTint="@color/teal_dim" android:layout_marginBottom="8dp"/>
+
+        <TextView android:id="@+id/tvTestResult"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="" android:textColor="@color/color_gold"
+            android:textSize="12sp" android:fontFamily="monospace"
+            android:layout_marginBottom="20dp" android:padding="8dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Şehir (Hava Durumu)" android:textColor="@color/teal_text"
+            android:textSize="13sp" android:layout_marginBottom="6dp"/>
+
+        <EditText android:id="@+id/etLocation"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Istanbul" android:textColor="@color/teal_text"
+            android:textColorHint="@color/teal_mid" android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="text" android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Adınız" android:textColor="@color/teal_text"
+            android:textSize="13sp" android:layout_marginBottom="6dp"/>
+
+        <EditText android:id="@+id/etUserName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Mehmet Fatih" android:textColor="@color/teal_text"
+            android:textColorHint="@color/teal_mid" android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp" android:paddingVertical="12dp"
+            android:inputType="textPersonName" android:layout_marginBottom="32dp"/>
+
+        <Button android:id="@+id/btnSave"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="BAŞLAT" android:textColor="@color/bg_dark"
+            android:backgroundTint="@color/teal_primary"
+            android:textStyle="bold" android:letterSpacing="0.2"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+</ScrollView>
